@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="wrapper row">
+
+        <div class="left-side row">
+            <a id="logo">Semeraro Livio</a>
+
+            <ul class="row">
+                <li><a href="#!" class="nav-link">Accueil</a></li>
+                <li><a href="#!" class="nav-link">Galerie</a></li>
+                <li><a href="#!" class="nav-link">À propos</a></li>
+                <li><a href="#!" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="media row right-side">
+            <a href="#!"><img src="./assets/svg/facebook-fill.svg" alt="logo facebook"></a>
+            <a href="#!"><img src="./assets/svg/instagram-line.svg" alt="logo instagram"></a>
+        </div>
+
+    </nav>
+
+    <header class="wrapper">
+
+        <div class="content col">
+            <h1>Street artist & painter based in New Orleans.</h1>
+            <h4>Andrew West's use of satire and dark humour his subversive street art established him as an all-purpose provocateur with a distinctive technique and a take-no-prisoners attitude.</h4>
+        </div>
+
+    </header>
+
+    <main class="col">
+
+        <section id="gallery" class="wrapper">
+        </section>
+
+    </main>
+
+    <script defer>
+        const gal = document.querySelector('#gallery');
+        const liste = ["320", "240", "480", "640", "800", "600", "768", "1600"];
+
+        for (let i = 0; i != 7; i++) {
+            gal.innerHTML += `
+            <img src="https://source.unsplash.com/random/${liste[i]}x${liste[i+1]}" alt="Image dans la galerie">
+            `;
+        }
+    </script>
+
+</body>
+</html>
+

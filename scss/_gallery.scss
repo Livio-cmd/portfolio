@@ -1,0 +1,23 @@
+#gallery {
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+
+    img {
+        width: 31%;
+        height: 60vh;
+
+        flex-grow: 1;
+
+        object-fit: cover;
+        object-position: center;
+
+        &:last-child {
+            max-width: 31%;
+        }
+    }
+
+}
