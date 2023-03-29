@@ -32,29 +32,52 @@
     <header class="wrapper">
 
         <div class="content col">
-            <h1>Street artist & painter based in New Orleans.</h1>
-            <h4>Andrew West's use of satire and dark humour his subversive street art established him as an all-purpose provocateur with a distinctive technique and a take-no-prisoners attitude.</h4>
+            <h1>Photographe amateur, bienvenue dans mon monde</h1>
+            <h4>Livio, passionné de photo graphie, je souhaite éxposer mon travail et mes progrès en photographie. J'aime figer des moments de vie et de nature. <b>«</b> Ceci est une citation <b>»</b>.</h4>
         </div>
 
     </header>
 
     <main class="col">
 
-        <section id="gallery" class="wrapper">
+        <div class="col">
+            <section id="gallery" class="wrapper">
+                <script>
+                    const gal = document.querySelector('#gallery');
+                    const liste = ["320", "240", "480", "640", "800", "600", "768", "1600"];
+
+                    for (let i = 0; i != 7; i++) {
+                        gal.innerHTML += `
+                        <img src="https://source.unsplash.com/random/${liste[i]}x${liste[i+1]}" alt="Image dans la galerie">
+                        `;
+                    }
+                </script>
+            </section>
+
+            <section class="wrapper" style="padding-top: 0;">
+                <a href="#!" class="button">Voir mon travail</a>
+            </section>
+        </div>
+
+        <section id="slogan" class="col">
+            <h4>Ouvert aux critiques</h4>
+            <h2 style="text-transform: uppercase;">Pour critiquer mon travail ou me contacter, je suis présent ci dessous !</h2>
+            <a href="#!" class="button">Contacez moi</a>
         </section>
 
     </main>
 
-    <script defer>
-        const gal = document.querySelector('#gallery');
-        const liste = ["320", "240", "480", "640", "800", "600", "768", "1600"];
-
-        for (let i = 0; i != 7; i++) {
-            gal.innerHTML += `
-            <img src="https://source.unsplash.com/random/${liste[i]}x${liste[i+1]}" alt="Image dans la galerie">
-            `;
-        }
-    </script>
+    <footer>
+        <div class="section row content">
+            <div class="left-side row">
+                <a href="#!"><img src="./assets/svg/share-line.svg" alt="Lien de partage"></a>
+                <p>Partager le contenue</p>
+            </div>
+            <div class="right-side">
+                <p>Made by <b>Livio</b></p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
